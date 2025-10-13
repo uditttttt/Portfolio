@@ -3,7 +3,7 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Skills from './components/Skills';
-import Projects from './components/Projects'; // 1. Import the Projects component
+import Projects from './components/Projects';
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <Navbar />
       <Hero />
       <Skills />
-      <Projects /> {/* 2. Add the Projects component here */}
+      <Projects />
     </div>
   )
 }

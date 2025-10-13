@@ -1,7 +1,6 @@
 // src/components/Skills.jsx
 
 import React from 'react';
-// Import motion from framer-motion
 import { motion } from 'framer-motion'; 
 
 import { FaJava, FaPython, FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaGitAlt, FaGithub } from 'react-icons/fa';
@@ -9,6 +8,7 @@ import { SiCplusplus, SiExpress, SiMongodb, SiMysql, SiPostman } from 'react-ico
 import { VscSymbolStructure, VscVscode } from 'react-icons/vsc';
 
 const skillsData = [
+  // ... your skills data ...
   { name: 'Java', icon: <FaJava size={24} />, category: 'Languages' },
   { name: 'C++', icon: <SiCplusplus size={24} />, category: 'Languages' },
   { name: 'Python', icon: <FaPython size={24} />, category: 'Languages' },
@@ -30,74 +30,80 @@ const skillsData = [
 const Skills = () => {
   const categories = [...new Set(skillsData.map(skill => skill.category))];
 
-  // Animation variants for skill categories
-  const categoryVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
-  };
-
-  // Animation variants for individual skill items
   const skillItemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { 
+        duration: 0.5,
+        ease: "easeOut"
+      } 
+    },
   };
 
   return (
-    <section id="skills" className="py-20 bg-slate-900">
+    <section id="skills" className="py-20 bg-slate-900 overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16"> {/* Increased bottom margin for better spacing */}
+        <div className="text-center mb-16">
+          {/* FIXED: Re-added the correct className for styling */}
           <motion.h2 
-            className="text-4xl font-bold mb-4"
-            initial={{ opacity: 0, y: -50 }} // Start slightly above and invisible
-            whileInView={{ opacity: 1, y: 0 }} // Animate to visible and original position
-            viewport={{ once: true, amount: 0.5 }} // Trigger once when 50% in view
-            transition={{ duration: 0.8 }} // Smooth transition
+            className="text-4xl font-bold mb-4" 
+            initial={{ opacity: 0, y: -30 }} 
+            whileInView={{ opacity: 1, y: 0 }} 
+            viewport={{ once: true }} 
+            transition={{ duration: 0.8 }}
           >
             Technical Proficiency
           </motion.h2>
+          {/* FIXED: Re-added the correct className for styling */}
           <motion.p 
-            className="text-slate-400 mt-2 text-lg" // Slightly larger text
-            initial={{ opacity: 0, y: -30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.8, delay: 0.2 }} // Delay slightly after title
+            className="text-slate-400 mt-2 text-lg" 
+            initial={{ opacity: 0, y: -30 }} 
+            whileInView={{ opacity: 1, y: 0 }} 
+            viewport={{ once: true }} 
+            transition={{ duration: 0.8, delay: 0.2 }}
           >
             A snapshot of the languages, frameworks, and tools I work with.
           </motion.p>
         </div>
         
         <div className="max-w-4xl mx-auto">
-          {categories.map((category, index) => (
-            <motion.div 
-              key={category} 
-              className="mb-10" // Adjusted bottom margin for categories
-              variants={categoryVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }} // Trigger when 20% in view
-              transition={{ delay: index * 0.1 }} // Stagger categories slightly
-            >
-              <h3 className="text-2xl font-semibold text-cyan-400 mb-5">{category}</h3> {/* Larger category title */}
+          {categories.map((category) => (
+            <div key={category} className="mb-10">
+              <div className="relative inline-block mb-5 overflow-hidden">
+                <h3 className="text-2xl font-semibold text-cyan-400">
+                  {category}
+                </h3>
+                <motion.div
+                  className="absolute top-0 left-0 bottom-0 right-0 bg-cyan-500"
+                  initial={{ x: 0 }}
+                  whileInView={{ x: '100%' }}
+                  viewport={{ once: true, amount: 0.8 }}
+                  transition={{ duration: 0.9, ease: 'easeOut' }}
+                />
+              </div>
+
               <motion.div 
                 className="flex flex-wrap gap-4"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
-                transition={{ staggerChildren: 0.07 }} // Stagger individual skills
+                transition={{ staggerChildren: 0.1 }}
               >
                 {skillsData.filter(skill => skill.category === category).map((skill) => (
                   <motion.div 
                     key={skill.name} 
                     className="flex items-center gap-3 bg-slate-800 border border-slate-700 rounded-lg px-4 py-2 text-base font-medium
                                hover:bg-cyan-400 hover:text-slate-900 hover:border-cyan-400 transition-all duration-300 cursor-pointer"
-                    variants={skillItemVariants} // Apply item animation variants
+                    variants={skillItemVariants}
                   >
                     {skill.icon}
                     <span>{skill.name}</span>
                   </motion.div>
                 ))}
               </motion.div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
@@ -105,4 +111,4 @@ const Skills = () => {
   );
 };
 
-export default Skills; 
+export default Skills;
