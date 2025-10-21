@@ -10,7 +10,7 @@ const projectsData = [
     title: 'Smart AI Interview Preparation App',
     description: 'A MERN stack application using the Gemini API to generate personalized technical Q&A for interview prep, featuring JWT authentication and role-based content.',
     stack: ['React', 'Node.js', 'Express', 'MongoDB', 'Gemini API', 'Tailwind CSS'],
-    liveLink: '#',
+    liveLink: 'https://smart-ai-interview-preparation-app-ybli.onrender.com/',
     githubLink: 'https://github.com/uditttttt/Smart-AI-Interview-Preparation-App',
   },
   {
