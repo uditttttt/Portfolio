@@ -101,5 +101,5 @@ const Projects = () => {
     </section>
   );
 };
-
+ 
 export default Projects;  
