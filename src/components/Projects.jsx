@@ -18,7 +18,7 @@ const projectsData = [
     description: 'A full-stack MERN app with a budgeting system and data visualization. Implemented secure JWT authentication, a full CRUD API, and server-side filtering.',
     stack: ['React', 'Node.js', 'Express', 'MongoDB', 'JWT', 'Tailwind CSS', 'Chart.js'],
     liveLink: 'https://expense-tracker-app-frontend-mvtn.onrender.com/login',
-    githubLink: '#',
+    githubLink: 'https://github.com/uditttttt/Expense-Tracker-App',
   },
   {
     title: 'AI-Powered Code Reviewer',
