@@ -24,7 +24,7 @@ const projectsData = [
     title: 'AI-Powered Code Reviewer',
     description: 'An AI-integrated platform to review and improve user-submitted code snippets. Uses OpenAI/Gemini APIs on the backend to detect errors and suggest best practices.',
     stack: ['React', 'Node.js', 'Express', 'MongoDB', 'Gemini API'],
-    liveLink: '#',
+    liveLink: 'https://ai-powered-code-reviewer-frontend-ofml.onrender.com/',
     githubLink: '#',
   },
 ];
