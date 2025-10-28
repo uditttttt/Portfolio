@@ -44,7 +44,7 @@ const Contact = () => {
           </a>
 
           <div className="flex justify-center gap-6 mt-8">
-            <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-cyan-400 transition-colors">
+            <a href="https://www.linkedin.com/in/udit-singh-b6b8bb259/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-cyan-400 transition-colors">
               <FaLinkedin size={30} />
             </a>
             <a href="https://github.com/your-github-profile" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-cyan-400 transition-colors">
