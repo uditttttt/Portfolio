@@ -2,10 +2,15 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaCertificate } from 'react-icons/fa'; // Icon for certificates
+import { FaCertificate } from 'react-icons/fa';
 
-// Data from your resume
+// UPDATED: Now includes all 3 certificates from your resume
 const certificatesData = [
+  {
+    title: 'Oracle Cloud Infrastructure 2025 Certified Generative AI Professional',
+    issuedBy: 'Oracle',
+    link: '#' // IMPORTANT: Replace '#' with your certificate link
+  },
   {
     title: 'The Complete Full-Stack Web Development Bootcamp',
     issuedBy: 'Udemy',
@@ -55,8 +60,8 @@ const Certificates = () => {
           </motion.p>
         </div>
         
-        {/* We use max-w-2xl here for a 2-column layout that looks good */}
-        <div className="max-w-2xl mx-auto grid md:grid-cols-2 gap-8">
+        {/* UPDATED: Changed grid layout for 3 items */}
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {certificatesData.map((cert, index) => (
             <motion.div
               key={index}
