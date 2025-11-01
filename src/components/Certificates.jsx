@@ -9,7 +9,7 @@ const certificatesData = [
   {
     title: 'Oracle Cloud Infrastructure 2025 Certified Generative AI Professional',
     issuedBy: 'Oracle',
-    link: '#' // IMPORTANT: Replace '#' with your certificate link
+    link: 'https://drive.google.com/file/d/1ikqR76zwL-aQC2o7X27dOBkPzPlewR6C/view' // IMPORTANT: Replace '#' with your certificate link
   },
   {
     title: 'The Complete Full-Stack Web Development Bootcamp',

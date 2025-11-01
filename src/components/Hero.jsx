@@ -65,7 +65,7 @@ const Hero = () => {
           variants={buttonVariants}
         >
           <a 
-            href="https://drive.google.com/file/d/1z2BYZ_-DoxADdLtHQqzLL7tf7G6lRyVX/view?usp=drive_link" // Keep your link here
+            href="https://drive.google.com/file/d/1S3uIVy-uwgtILePac0lf4H7XzgVh3lmu/view?usp=drive_link" // Keep your link here
             target="_blank" 
             rel="noopener noreferrer"
             className="bg-cyan-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-cyan-600 transition duration-300 w-full sm:w-auto"
