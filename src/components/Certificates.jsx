@@ -14,7 +14,7 @@ const certificatesData = [
   {
     title: 'The Complete Full-Stack Web Development Bootcamp',
     issuedBy: 'Udemy',
-    link: '#' // IMPORTANT: Replace '#' with your certificate link
+    link: 'https://drive.google.com/file/d/1TpXEHDtMzCz0iwMcyB_7TNdET-Ns6Ycr/view' // IMPORTANT: Replace '#' with your certificate link
   },
   {
     title: 'SQL (Intermediate)',
